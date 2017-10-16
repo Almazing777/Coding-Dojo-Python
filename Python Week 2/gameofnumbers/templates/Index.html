@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Number Game! </title>
+</head>
+<body>
+	<h1> Welcome to the Great Number Game! </h1>
+	<p> I am thinking of a number between 1 and 100 </p>
+	<p> Take a Guess! </p>
+
+	<div id='mid'>
+		{{ session['result'] }}
+
+		{% if session.status == "correct!" %}
+			
+		{% elif session.status == "low" %}
+			
+		{% elif session.status == 'too high!' %}
+			
+		<a href="/reset"><button>Play Again</button></a>	
+		{% endif %}
+
+		
+	</div>
+
+	<br>
+
+	<form action="/guess" method="post">
+		<input type ="number" name="guess">
+		<input type = "submit" value="Guess"> 
+	</form>
+</body>
+
+</html>

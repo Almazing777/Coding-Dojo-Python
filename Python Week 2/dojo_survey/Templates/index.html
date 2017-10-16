@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Test Index</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+    <h3>Create a User</h3>
+     
+    <form action='/results' method='post'>
+          Your Name: <input type='text' name='name'> <br>
+          Dojo Location: <input type='text' name='location'> <br>
+          Favorite Language: 
+          <select id='language' name='language' style="width: 200px"> 
+          	<option value="Python">Python</option>
+  			<option value="JavaScript">JS</option>
+  			<option value="Ruby">Ruby</option>
+  		  </select>
+           <br>
+          Comment (Optional): <input style ='height:200px; width: 200px' type="text" name="comment">
+          <br>
+          <input type='submit' value='create user'>
+    </form>
+</body>
+
+<style>
+	form{
+		width: 350px;
+	}
+
+	input{
+		margin: 5px;
+	}
+
+
+</html>

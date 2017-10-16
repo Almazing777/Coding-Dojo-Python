@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dojo Survey Validation</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for messages in messages %}
+          <p>{{ messages }} </p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <h1>Index Page</h1>
+    <h3>Create a User</h3>
+     
+    <form action='/results' method='post'>
+      Your Name: <input type='text' name='name'> <br>
+      Dojo Location: 
+      <select id='location' name='location'> 
+        <option type="NYC">NYC</option>
+        <option value="SF">SF</option>
+        <option value="Seattle">Seattle</option>
+        <option value="DC">DC</option>
+      </select>
+      <br>
+      Favorite Language: 
+      <select id='language' name='language'> 
+        <option value="Python">Python</option>
+  			<option value="Ruby">Ruby</option>
+  			<option value="JS">JS</option>
+        <option value="C#">C#</option>
+      </select>
+      <br>
+      Comment (Optional): 
+      <input style ='height:200px; width: 200px' type="text" name="comment">
+      <br>
+      <input type='submit' value='create user'>
+    </form>
+</body>
+
+<style>
+	form{
+		width: 350px;
+	}
+
+	input{
+		margin: 5px;
+	}
+</style>
+
+</html>
