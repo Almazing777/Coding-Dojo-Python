@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Users Here</title>
+  {% for data in friend %}
+
+  <form action="/friends/{{ data['id'] }}" method='POST'>
+    <label for="first_name">First Name:<input type="text" name="first_name" value ="{{ data['first_name'] }}"></label><br>
+    <label for="last_name">Last Name:<input type="text" name="last_name" value ="{{ data['last_name'] }}"></label><br>
+    <label for="email">Email:<input type="text" name="email" value ="{{ data['email'] }}"></label><br>
+    <input type="submit" value="update info">
+  </form>
+
+  {% endfor %}
+
+  <!-- <a href="/home" class ="home"> Go back to the home page </a> -->
+</body>
+</html>
