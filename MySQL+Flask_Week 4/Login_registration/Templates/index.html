@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Login and Registration</title>
+</head>
+<body>
+  <h2> Login Here </h2>
+
+    <form action='/login' method='POST'>
+      <label for="email">Email:<input type="text" name="email"></label><br>
+      <label for="password">Password:<input type="text" name="pwd"></label><br>
+      <input type="submit" value="Login">
+    </form>
+
+  <br> 
+
+	<h2>Register Here</h2>
+
+  {% with messages = get_flashed_messages(with_categories = true) %}
+    {% if messages %}
+     {% for category, message in messages %}
+       <p class="{{category}}">{{message}}</p>
+     {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <form action='/registration' method='POST'>
+    <label for="first_name">First Name:<input type="text" name="first_name"></label><br>
+    <label for="last_name">Last Name:<input type="text" name="last_name"></label><br>
+    <label for="email">Email:<input type="text" name="email"></label><br>
+    <label for="password">Password:<input type="text" name="pwd"></label><br>
+    <label for="confirm">Confirm Password:<input type="text" name="pwd_confirm"></label><br>
+    <input type="submit" value="Register">
+  </form>
+
+</body>
+</html>
