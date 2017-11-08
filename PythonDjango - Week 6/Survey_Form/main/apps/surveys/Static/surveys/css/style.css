@@ -1,0 +1,22 @@
+.wrapper{
+	border-style: solid;
+	width: 400px;
+	height: 150px;
+	padding: 10px;
+	margin: 5px;
+}
+
+.message{
+	border-style: solid;
+	width: 400px;
+}
+
+.submitted_info{
+	border-style: solid;
+	width: 400px;
+	height: auto;
+}
+
+.submitted_info p{
+	text-decoration: underline;
+}

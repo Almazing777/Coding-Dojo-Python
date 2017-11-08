@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static 'surveys/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+      <!-- Put the static files in the static folder inside your app.  Django collects files within all static folders and puts them within a single folder -->    
+  </head>
+<body>
+  <div class = "message">
+    <p> Thanks for submitting this form! You have submitted this form {{ request.session.times}} times now. </p>
+  </div>
+
+  <div class = "submitted_info">
+    <p style=""> Submitted Information </p>
+    <h3> Name: {{ request.session.name }} </h3>
+    <h3> Dojo Location: {{ request.session.location }} </h3>
+    <h3> Favorite Language: {{ request.session.language }} </h3>
+    <h3> Comment: {{ request.session.comment }} </h3>
+  </div>
+
+  <a href="/back"> Go Back </a>
+
+</body>
+</html>
