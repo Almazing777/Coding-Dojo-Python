@@ -15,5 +15,4 @@ def index(request):
 
 def reset(request):
 	del request.session['times']
-	del request.session['word']
 	return redirect('/')
