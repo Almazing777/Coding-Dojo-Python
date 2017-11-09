@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      {% load static %}
+
+    <link rel="stylesheet" href="{% static 'amadon/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+   
+  </head>
+<body>
+ <h3> Thank you for your business! </h3>
+
+ <p> We charged your credit card for ${{request.session.charged_amount}} </p>
+
+ <p> You have ordered {{request.session.times}} items so far and spent ${{request.session.spent}} with Amadon.com <br>
+
+  <a href = "/back"> Go back </a>
+
+</body>
+</html>
