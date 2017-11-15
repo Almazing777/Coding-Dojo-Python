@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-UA-Compatible" content="ie=edge">
+  <title> SemiRestful Users </title>
+  {% load static %}
+  <!-- bootstrap -->
+    <link rel="stylesheet" href="{% static 'users/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/bootstrap-4.0.0-beta-dist/css/bootstrap.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<h3> Show User {{ user.id }} </h3>
+<body>
+  Full Name: {{ user.first_name }} {{user.last_name}} <br>
+  Email: {{ user.email }} <br>
+  Created at: {{ user.created_at }} <br>
+
+  <a href="/users/{{ user.id }}/edit"> Edit </a>
+  <a href="/users/{{ user.id }}/delete"> Delete </a>
+
+</body>
+</html>
