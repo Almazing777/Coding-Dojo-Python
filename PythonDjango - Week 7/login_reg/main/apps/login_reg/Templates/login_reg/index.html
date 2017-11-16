@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-UA-Compatible" content="ie=edge">
+  <title> Login and Registration </title>
+  {% load static %}
+  <!-- bootstrap -->
+    <link rel="stylesheet" href="{% static 'courses/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'courses/css/bootstrap-4.0.0-beta-dist/css/bootstrap.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+  {% if messages %}
+    <div class="messages">
+    {% for message in messages %}
+      <p>{{ message }}</p>
+    {% endfor %}
+    </div>
+  {% endif %}
+
+  <h2> Login Here </h2>
+
+  <fieldset>
+    <form action='/login' method='POST'>
+    {% csrf_token %}
+      <label for="email">Email:<input type="text" name="email"></label><br>
+      <label for="password">Password:<input type="text" name="password"></label><br>
+      <input type="submit" value="Login">
+    </form>
+  </fieldset>
+
+  <br> 
+
+  <h2>Register Here</h2>
+
+  <fieldset> 
+  <form action='/register' method='POST'>
+    {% csrf_token %}
+    <label for="first_name">First Name:<input type="text" name="first_name"></label><br>
+    <label for="last_name">Last Name:<input type="text" name="last_name"></label><br>
+    <label for="email">Email:<input type="text" name="email"></label><br>
+    <label for="password">Password:<input type="text" name="password"></label><br>
+    <label for="confirm">Confirm Password:<input type="text" name="confirm_password"></label><br>
+    <input type="submit" value="Register">
+  </form>
+  </fieldset>
+
+</body>
+</html>
