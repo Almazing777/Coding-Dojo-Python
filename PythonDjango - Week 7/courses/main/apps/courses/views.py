@@ -29,27 +29,4 @@ def confirm(request, course_id):
 	}
 	return render(request, 'courses/confirm.html', context)
 
-# def new(request):
-# 	return render(request, 'users/new.html')
-
-# def edit(request, user_id):
-# 	context = {
-# 		'user': User.objects.get(id=user_id)
-# 	}
-# 	return render(request, 'users/update.html', context)
-
-# def update(request, user_id):
-# 	if request.method == "POST":
-# 		user_to_update = User.objects.get(id=user_id)
-# 		user_to_update.first_name = request.POST["first_name"]
-# 		user_to_update.last_name = request.POST["last_name"]
-# 		user_to_update.email = request.POST["email"]
-# 		user_to_update.save()
-# 		return redirect ('/')
-# 	else:
-# 		context = {
-# 			"user": User.objects.get(id=user_id)
-# 		}
-# 		return render(request, "users/show.html", context)
-
 
