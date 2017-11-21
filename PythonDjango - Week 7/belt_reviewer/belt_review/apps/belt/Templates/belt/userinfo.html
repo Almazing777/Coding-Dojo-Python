@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-UA-Compatible" content="ie=edge">
+  <title></title>
+  {% load static %}
+  <!-- bootstrap -->
+    <link rel="stylesheet" href="{% static 'belt/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'belt/css/bootstrap-4.0.0-beta-dist/css/bootstrap.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+ <p><a href="/books">Home</a> | <a href="/logout">Logout</a></p>
+    <div id="user_info">
+      Name: {{user.first_name}} {{ user.last_name }}<br>
+      Email: {{user.email}}<br>
+      Total Reviews: {{num_reviews}}<br>
+      <br>
+      Posted reviews on the following books:
+      <ul>
+      {% for book in books %}
+        <li><a href="/books/{{book.id}}">{{book.title}}</a></li>
+      {% endfor %}
+      </ul>
+      </div>
+    </div>
+</body>
+</html>
