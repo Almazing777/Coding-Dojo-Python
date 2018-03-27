@@ -1,4 +1,4 @@
-size = 4
+size = 6
 for i in range(size):
     if i % 2 == 0:
         print(' *' * size)
