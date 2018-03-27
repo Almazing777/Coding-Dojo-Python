@@ -25,7 +25,7 @@ for x in list:
         if len(x) >= 50:
             print "Long sentence"
         else:
-            print "Short sentence"
+            print "Short sentence "
     elif type(x) == list:
         if len(x) >= 10:
             print "Big list!"
