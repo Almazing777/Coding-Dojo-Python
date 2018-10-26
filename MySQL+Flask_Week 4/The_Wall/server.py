@@ -2,9 +2,9 @@ from flask import Flask, request, redirect, render_template, session, flash
 from datetime import datetime
 from flask_bcrypt import Bcrypt
 from mysqlconnection import MySQLConnector
-import re
+import re 
 
-EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9\.\+_-]+@[a-zA-Z0-9\._-]+\.[a-zA-Z]*$')
+EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9\.\+_-]+@[a-zA-Z0-9\._-]+\.[a-zA-Z]*$' )
 PASSWORD_REGEX = re.compile(r'^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])')
 
 app = Flask(__name__)
